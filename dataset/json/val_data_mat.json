@@ -1,0 +1,2186 @@
+{
+    "object0102_object0103": {
+        "q0009": {
+            "text": "Out of the two objects, which is more likely to contain plastic?",
+            "label": 0
+        },
+        "q0051": {
+            "text": "If you had to pick, which object do you think is made of rubber?",
+            "label": 1
+        }
+    },
+    "object0110_object0111": {
+        "q0021": {
+            "text": "Which object looks like it is made out of plastic?",
+            "label": 0
+        },
+        "q0165": {
+            "text": "Out of the two objects, which is more likely to contain goo?",
+            "label": 1
+        }
+    },
+    "object0118_object0119": {
+        "q0076": {
+            "text": "Out of the two objects, which is more likely to contain glass?",
+            "label": 0
+        },
+        "q0096": {
+            "text": "Which object looks like it is made out of minerals?",
+            "label": 1
+        }
+    },
+    "object0124_object0125": {
+        "q0029": {
+            "text": "Which object is more likely to be made out of paper?",
+            "label": 0
+        },
+        "q0049": {
+            "text": "Which item is probably made of goo?",
+            "label": 1
+        }
+    },
+    "object0128_object0129": {
+        "q0007": {
+            "text": "If you had to pick, which object do you think is made of plant?",
+            "label": 0
+        },
+        "q0001": {
+            "text": "Which object looks like it is made out of wood?",
+            "label": 1
+        },
+        "q0022": {
+            "text": "Which item is probably made of textiles?",
+            "label": 1
+        }
+    },
+    "object0136_object0137": {
+        "q0084": {
+            "text": "Which object looks like it is made out of foam?",
+            "label": 0
+        },
+        "q0006": {
+            "text": "Which item is probably made of plastic?",
+            "label": 1
+        }
+    },
+    "object0138_object0139": {
+        "q0012": {
+            "text": "Which item is probably made of metal?",
+            "label": 0
+        },
+        "q0026": {
+            "text": "Which is more likely to be a glass-like object?",
+            "label": 1
+        }
+    },
+    "object0152_object0153": {
+        "q0086": {
+            "text": "Out of the two objects, which is more likely to contain rubber?",
+            "label": 0
+        },
+        "q0014": {
+            "text": "Which is more likely to be a foam-like object?",
+            "label": 1
+        }
+    },
+    "object0158_object0159": {
+        "q0006": {
+            "text": "Which item is probably made of plastic?",
+            "label": 0
+        },
+        "q0067": {
+            "text": "Which object is more likely to be made out of wax?",
+            "label": 1
+        }
+    },
+    "object0162_object0163": {
+        "q0062": {
+            "text": "Which object is more likely to be made out of textiles?",
+            "label": 0
+        },
+        "q0034": {
+            "text": "Out of the two objects, which is more likely to contain paper?",
+            "label": 1
+        }
+    },
+    "object0164_object0165": {
+        "q0019": {
+            "text": "Which object is more likely to be made out of plastic?",
+            "label": 0
+        },
+        "q0004": {
+            "text": "Which is more likely to be a textiles-like object?",
+            "label": 1
+        }
+    },
+    "object0166_object0167": {
+        "q0083": {
+            "text": "Which item is probably made of ceramic?",
+            "label": 0
+        },
+        "q0067": {
+            "text": "Which object is more likely to be made out of wax?",
+            "label": 1
+        }
+    },
+    "object0168_object0169": {
+        "q0092": {
+            "text": "Which object is more likely to be made out of plant?",
+            "label": 0
+        },
+        "q0139": {
+            "text": "Which object is more likely to be made out of ceramic?",
+            "label": 1
+        }
+    },
+    "object0170_object0171": {
+        "q0004": {
+            "text": "Which is more likely to be a textiles-like object?",
+            "label": 0
+        },
+        "q0006": {
+            "text": "Which item is probably made of plastic?",
+            "label": 1
+        }
+    },
+    "object0306_object0307": {
+        "q0201": {
+            "text": "Which item is probably made of styrofoam?",
+            "label": 0
+        },
+        "q0029": {
+            "text": "Which object is more likely to be made out of paper?",
+            "label": 1
+        }
+    },
+    "object0308_object0309": {
+        "q0029": {
+            "text": "Which object is more likely to be made out of paper?",
+            "label": 0
+        },
+        "q0012": {
+            "text": "Which item is probably made of metal?",
+            "label": 1
+        }
+    },
+    "object0348_object0349": {
+        "q0048": {
+            "text": "If you had to pick, which object do you think is made of metal?",
+            "label": 0
+        },
+        "q0112": {
+            "text": "Which is more likely to be a rubber-like object?",
+            "label": 1
+        },
+        "q0000": {
+            "text": "Which object looks like it is made out of paper?",
+            "label": 1
+        }
+    },
+    "object0812_object0813": {
+        "q0002": {
+            "text": "Which object looks like it is made out of textiles?",
+            "label": 1
+        },
+        "q0024": {
+            "text": "Which is more likely to be a metal-like object?",
+            "label": 1
+        }
+    },
+    "object0910_object0911": {
+        "q0001": {
+            "text": "Which object looks like it is made out of wood?",
+            "label": 0
+        },
+        "q0062": {
+            "text": "Which object is more likely to be made out of textiles?",
+            "label": 1
+        }
+    },
+    "object0970_object0971": {
+        "q0021": {
+            "text": "Which object looks like it is made out of plastic?",
+            "label": 1
+        }
+    },
+    "object0986_object0987": {
+        "q0193": {
+            "text": "Which object looks like it is made out of gelatin?",
+            "label": 0
+        },
+        "q0020": {
+            "text": "Which object is more likely to be made out of metal?",
+            "label": 1
+        }
+    },
+    "object1026_object1027": {
+        "q0020": {
+            "text": "Which object is more likely to be made out of metal?",
+            "label": 0
+        },
+        "q0015": {
+            "text": "Which item is probably made of wood?",
+            "label": 1
+        }
+    },
+    "object1055_object1056": {
+        "q0019": {
+            "text": "Which object is more likely to be made out of plastic?",
+            "label": 0
+        },
+        "q0168": {
+            "text": "If you had to pick, which object do you think is made of fur?",
+            "label": 0
+        },
+        "q0045": {
+            "text": "If you had to pick, which object do you think is made of wood?",
+            "label": 1
+        }
+    },
+    "object1126_object1127": {
+        "q0073": {
+            "text": "Which is more likely to be a wax-like object?",
+            "label": 0
+        },
+        "q0004": {
+            "text": "Which is more likely to be a textiles-like object?",
+            "label": 1
+        }
+    },
+    "object1153_object1154": {
+        "q0029": {
+            "text": "Which object is more likely to be made out of paper?",
+            "label": 0
+        },
+        "q0037": {
+            "text": "Which item is probably made of clay?",
+            "label": 1
+        },
+        "q0081": {
+            "text": "If you had to pick, which object do you think is made of ceramic?",
+            "label": 1
+        }
+    },
+    "object1198_object1199": {
+        "q0034": {
+            "text": "Out of the two objects, which is more likely to contain paper?",
+            "label": 0
+        },
+        "q0015": {
+            "text": "Which item is probably made of wood?",
+            "label": 1
+        },
+        "q0022": {
+            "text": "Which item is probably made of textiles?",
+            "label": 1
+        }
+    },
+    "object1204_object1205": {
+        "q0035": {
+            "text": "Which object looks like it is made out of metal?",
+            "label": 0
+        },
+        "q0002": {
+            "text": "Which object looks like it is made out of textiles?",
+            "label": 1
+        }
+    },
+    "object1244_object1245": {
+        "q0022": {
+            "text": "Which item is probably made of textiles?",
+            "label": 0
+        }
+    },
+    "object1302_object1303": {
+        "q0024": {
+            "text": "Which is more likely to be a metal-like object?",
+            "label": 0
+        },
+        "q0025": {
+            "text": "If you had to pick, which object do you think is made of plastic?",
+            "label": 0
+        },
+        "q0202": {
+            "text": "Which object is more likely to be made out of concrete?",
+            "label": 1
+        },
+        "q0052": {
+            "text": "If you had to pick, which object do you think is made of minerals?",
+            "label": 1
+        }
+    },
+    "object1338_object1339": {
+        "q0009": {
+            "text": "Out of the two objects, which is more likely to contain plastic?",
+            "label": 0
+        },
+        "q0012": {
+            "text": "Which item is probably made of metal?",
+            "label": 1
+        }
+    },
+    "object1414_object1415": {
+        "q0030": {
+            "text": "Which object is more likely to be made out of wood?",
+            "label": 0
+        },
+        "q0195": {
+            "text": "Which object looks like it is made out of dirt?",
+            "label": 0
+        },
+        "q0103": {
+            "text": "Which is more likely to be a plant-like object?",
+            "label": 0
+        },
+        "q0017": {
+            "text": "Which item is probably made of paper?",
+            "label": 1
+        },
+        "q0019": {
+            "text": "Which object is more likely to be made out of plastic?",
+            "label": 1
+        }
+    },
+    "object0175_object0154": {
+        "q0038": {
+            "text": "Which object looks like it is made out of stone?",
+            "label": 0
+        },
+        "q0029": {
+            "text": "Which object is more likely to be made out of paper?",
+            "label": 1
+        }
+    },
+    "object0135_object0116": {
+        "q0062": {
+            "text": "Which object is more likely to be made out of textiles?",
+            "label": 0
+        },
+        "q0039": {
+            "text": "Which item is probably made of glass?",
+            "label": 1
+        }
+    },
+    "object1302_object1126": {
+        "q0041": {
+            "text": "Out of the two objects, which is more likely to contain metal?",
+            "label": 0
+        },
+        "q0019": {
+            "text": "Which object is more likely to be made out of plastic?",
+            "label": 0
+        },
+        "q0056": {
+            "text": "Which object looks like it is made out of wax?",
+            "label": 1
+        }
+    },
+    "object0118_object1340": {
+        "q0026": {
+            "text": "Which is more likely to be a glass-like object?",
+            "label": 0
+        },
+        "q0035": {
+            "text": "Which object looks like it is made out of metal?",
+            "label": 1
+        }
+    },
+    "object0142_object1026": {
+        "q0017": {
+            "text": "Which item is probably made of paper?",
+            "label": 0
+        },
+        "q0024": {
+            "text": "Which is more likely to be a metal-like object?",
+            "label": 1
+        }
+    },
+    "object1256_object0987": {
+        "q0000": {
+            "text": "Which object looks like it is made out of paper?",
+            "label": 0
+        },
+        "q0035": {
+            "text": "Which object looks like it is made out of metal?",
+            "label": 1
+        }
+    },
+    "object0143_object1248": {
+        "q0020": {
+            "text": "Which object is more likely to be made out of metal?",
+            "label": 0
+        },
+        "q0085": {
+            "text": "Out of the two objects, which is more likely to contain plant?",
+            "label": 1
+        },
+        "q0019": {
+            "text": "Which object is more likely to be made out of plastic?",
+            "label": 1
+        }
+    },
+    "object1204_object0812": {
+        "q0041": {
+            "text": "Out of the two objects, which is more likely to contain metal?",
+            "label": 0
+        },
+        "q0019": {
+            "text": "Which object is more likely to be made out of plastic?",
+            "label": 1
+        }
+    },
+    "object0172_object0176": {
+        "q0203": {
+            "text": "If you had to pick, which object do you think is made of powder?",
+            "label": 0
+        },
+        "q0011": {
+            "text": "If you had to pick, which object do you think is made of paper?",
+            "label": 1
+        }
+    },
+    "object1199_object1309": {
+        "q0015": {
+            "text": "Which item is probably made of wood?",
+            "label": 0
+        },
+        "q0004": {
+            "text": "Which is more likely to be a textiles-like object?",
+            "label": 0
+        },
+        "q0041": {
+            "text": "Out of the two objects, which is more likely to contain metal?",
+            "label": 1
+        }
+    },
+    "object0125_object1026": {
+        "q0204": {
+            "text": "Which object looks like it is made out of goo?",
+            "label": 0
+        },
+        "q0035": {
+            "text": "Which object looks like it is made out of metal?",
+            "label": 1
+        }
+    },
+    "object1198_object0167": {
+        "q0000": {
+            "text": "Which object looks like it is made out of paper?",
+            "label": 0
+        },
+        "q0164": {
+            "text": "If you had to pick, which object do you think is made of wax?",
+            "label": 1
+        }
+    },
+    "object1249_object0372": {
+        "q0069": {
+            "text": "Out of the two objects, which is more likely to contain wood?",
+            "label": 0
+        },
+        "q0092": {
+            "text": "Which object is more likely to be made out of plant?",
+            "label": 0
+        },
+        "q0010": {
+            "text": "Out of the two objects, which is more likely to contain foam?",
+            "label": 1
+        }
+    },
+    "object0129_object0372": {
+        "q0015": {
+            "text": "Which item is probably made of wood?",
+            "label": 0
+        },
+        "q0004": {
+            "text": "Which is more likely to be a textiles-like object?",
+            "label": 0
+        },
+        "q0084": {
+            "text": "Which object looks like it is made out of foam?",
+            "label": 1
+        }
+    },
+    "object1245_object0349": {
+        "q0046": {
+            "text": "Which object looks like it is made out of rubber?",
+            "label": 1
+        }
+    },
+    "object0335_object0319": {
+        "q0019": {
+            "text": "Which object is more likely to be made out of plastic?",
+            "label": 0
+        },
+        "q0039": {
+            "text": "Which item is probably made of glass?",
+            "label": 1
+        }
+    },
+    "object0890_object0310": {
+        "q0021": {
+            "text": "Which object looks like it is made out of plastic?",
+            "label": 0
+        },
+        "q0053": {
+            "text": "Which object looks like it is made out of ceramic?",
+            "label": 1
+        }
+    },
+    "object0150_object0102": {
+        "q0029": {
+            "text": "Which object is more likely to be made out of paper?",
+            "label": 0
+        },
+        "q0003": {
+            "text": "Which is more likely to be a plastic-like object?",
+            "label": 1
+        }
+    },
+    "object0109_object0158": {
+        "q0030": {
+            "text": "Which object is more likely to be made out of wood?",
+            "label": 0
+        },
+        "q0006": {
+            "text": "Which item is probably made of plastic?",
+            "label": 1
+        }
+    },
+    "object1171_object1339": {
+        "q0003": {
+            "text": "Which is more likely to be a plastic-like object?",
+            "label": 0
+        },
+        "q0041": {
+            "text": "Out of the two objects, which is more likely to contain metal?",
+            "label": 1
+        }
+    },
+    "object1205_object0173": {
+        "q0002": {
+            "text": "Which object looks like it is made out of textiles?",
+            "label": 0
+        },
+        "q0020": {
+            "text": "Which object is more likely to be made out of metal?",
+            "label": 1
+        }
+    },
+    "object0108_object0986": {
+        "q0017": {
+            "text": "Which item is probably made of paper?",
+            "label": 0
+        },
+        "q0025": {
+            "text": "If you had to pick, which object do you think is made of plastic?",
+            "label": 0
+        },
+        "q0205": {
+            "text": "Which is more likely to be a gelatin-like object?",
+            "label": 1
+        }
+    },
+    "object1142_object0780": {
+        "q0005": {
+            "text": "Which is more likely to be a paper-like object?",
+            "label": 0
+        },
+        "q0009": {
+            "text": "Out of the two objects, which is more likely to contain plastic?",
+            "label": 1
+        }
+    },
+    "object0134_object0131": {
+        "q0041": {
+            "text": "Out of the two objects, which is more likely to contain metal?",
+            "label": 0
+        },
+        "q0008": {
+            "text": "Which object is more likely to be made out of glass?",
+            "label": 1
+        }
+    },
+    "object0124_object0127": {
+        "q0021": {
+            "text": "Which object looks like it is made out of plastic?",
+            "label": 1
+        }
+    },
+    "object0161_object0103": {
+        "q0019": {
+            "text": "Which object is more likely to be made out of plastic?",
+            "label": 0
+        },
+        "q0112": {
+            "text": "Which is more likely to be a rubber-like object?",
+            "label": 1
+        }
+    },
+    "object0138_object0121": {
+        "q0041": {
+            "text": "Out of the two objects, which is more likely to contain metal?",
+            "label": 0
+        },
+        "q0088": {
+            "text": "Which is more likely to be a ceramic-like object?",
+            "label": 1
+        }
+    },
+    "object0116_object0164": {
+        "q0068": {
+            "text": "Which object looks like it is made out of glass?",
+            "label": 0
+        },
+        "q0003": {
+            "text": "Which is more likely to be a plastic-like object?",
+            "label": 1
+        }
+    },
+    "object0097_object0107": {
+        "q0041": {
+            "text": "Out of the two objects, which is more likely to contain metal?",
+            "label": 0
+        },
+        "q0119": {
+            "text": "Which item is probably made of wax?",
+            "label": 1
+        }
+    },
+    "object1244_object1341": {
+        "q0000": {
+            "text": "Which object looks like it is made out of paper?",
+            "label": 0
+        },
+        "q0025": {
+            "text": "If you had to pick, which object do you think is made of plastic?",
+            "label": 1
+        }
+    },
+    "object0102_object0761": {
+        "q0019": {
+            "text": "Which object is more likely to be made out of plastic?",
+            "label": 0
+        },
+        "q0037": {
+            "text": "Which item is probably made of clay?",
+            "label": 1
+        },
+        "q0053": {
+            "text": "Which object looks like it is made out of ceramic?",
+            "label": 1
+        }
+    },
+    "object0134_object0110": {
+        "q0041": {
+            "text": "Out of the two objects, which is more likely to contain metal?",
+            "label": 0
+        },
+        "q0025": {
+            "text": "If you had to pick, which object do you think is made of plastic?",
+            "label": 1
+        }
+    },
+    "object1101_object0155": {
+        "q0086": {
+            "text": "Out of the two objects, which is more likely to contain rubber?",
+            "label": 0
+        },
+        "q0040": {
+            "text": "Which is more likely to be a wood-like object?",
+            "label": 1
+        }
+    },
+    "object0119_object0306": {
+        "q0113": {
+            "text": "Out of the two objects, which is more likely to contain minerals?",
+            "label": 0
+        },
+        "q0133": {
+            "text": "Which is more likely to be a styrofoam-like object?",
+            "label": 1
+        }
+    },
+    "object0162_object0159": {
+        "q0062": {
+            "text": "Which object is more likely to be made out of textiles?",
+            "label": 0
+        },
+        "q0067": {
+            "text": "Which object is more likely to be made out of wax?",
+            "label": 1
+        }
+    },
+    "object0096_object0310": {
+        "q0010": {
+            "text": "Out of the two objects, which is more likely to contain foam?",
+            "label": 0
+        },
+        "q0088": {
+            "text": "Which is more likely to be a ceramic-like object?",
+            "label": 1
+        }
+    },
+    "object0174_object0928": {
+        "q0030": {
+            "text": "Which object is more likely to be made out of wood?",
+            "label": 0
+        },
+        "q0019": {
+            "text": "Which object is more likely to be made out of plastic?",
+            "label": 1
+        }
+    },
+    "object1100_object0137": {
+        "q0051": {
+            "text": "If you had to pick, which object do you think is made of rubber?",
+            "label": 0
+        },
+        "q0021": {
+            "text": "Which object looks like it is made out of plastic?",
+            "label": 1
+        }
+    },
+    "object1204_object0779": {
+        "q0035": {
+            "text": "Which object looks like it is made out of metal?",
+            "label": 0
+        },
+        "q0025": {
+            "text": "If you had to pick, which object do you think is made of plastic?",
+            "label": 1
+        }
+    },
+    "object0156_object1346": {
+        "q0068": {
+            "text": "Which object looks like it is made out of glass?",
+            "label": 0
+        },
+        "q0069": {
+            "text": "Out of the two objects, which is more likely to contain wood?",
+            "label": 1
+        }
+    },
+    "object1199_object0813": {
+        "q0040": {
+            "text": "Which is more likely to be a wood-like object?",
+            "label": 0
+        },
+        "q0048": {
+            "text": "If you had to pick, which object do you think is made of metal?",
+            "label": 1
+        },
+        "q0021": {
+            "text": "Which object looks like it is made out of plastic?",
+            "label": 1
+        }
+    },
+    "object0125_object1144": {
+        "q0165": {
+            "text": "Out of the two objects, which is more likely to contain goo?",
+            "label": 0
+        },
+        "q0048": {
+            "text": "If you had to pick, which object do you think is made of metal?",
+            "label": 1
+        }
+    },
+    "object0177_object1249": {
+        "q0023": {
+            "text": "Which object looks like it is made out of plant?",
+            "label": 1
+        }
+    },
+    "object0971_object1142": {
+        "q0048": {
+            "text": "If you had to pick, which object do you think is made of metal?",
+            "label": 0
+        },
+        "q0025": {
+            "text": "If you had to pick, which object do you think is made of plastic?",
+            "label": 0
+        },
+        "q0000": {
+            "text": "Which object looks like it is made out of paper?",
+            "label": 1
+        }
+    },
+    "object0762_object0127": {
+        "q0069": {
+            "text": "Out of the two objects, which is more likely to contain wood?",
+            "label": 0
+        },
+        "q0011": {
+            "text": "If you had to pick, which object do you think is made of paper?",
+            "label": 1
+        }
+    },
+    "object0153_object1153": {
+        "q0018": {
+            "text": "Which object is more likely to be made out of foam?",
+            "label": 0
+        },
+        "q0017": {
+            "text": "Which item is probably made of paper?",
+            "label": 1
+        }
+    },
+    "object1308_object0118": {
+        "q0017": {
+            "text": "Which item is probably made of paper?",
+            "label": 0
+        },
+        "q0076": {
+            "text": "Out of the two objects, which is more likely to contain glass?",
+            "label": 1
+        }
+    },
+    "object1339_object0166": {
+        "q0041": {
+            "text": "Out of the two objects, which is more likely to contain metal?",
+            "label": 0
+        },
+        "q0053": {
+            "text": "Which object looks like it is made out of ceramic?",
+            "label": 1
+        }
+    },
+    "object0133_object0306": {
+        "q0021": {
+            "text": "Which object looks like it is made out of plastic?",
+            "label": 0
+        },
+        "q0206": {
+            "text": "If you had to pick, which object do you think is made of styrofoam?",
+            "label": 1
+        }
+    },
+    "object0331_object1145": {
+        "q0019": {
+            "text": "Which object is more likely to be made out of plastic?",
+            "label": 0
+        },
+        "q0048": {
+            "text": "If you had to pick, which object do you think is made of metal?",
+            "label": 1
+        }
+    },
+    "object1056_object0956": {
+        "q0040": {
+            "text": "Which is more likely to be a wood-like object?",
+            "label": 0
+        },
+        "q0008": {
+            "text": "Which object is more likely to be made out of glass?",
+            "label": 1
+        }
+    },
+    "object1055_object1414": {
+        "q0009": {
+            "text": "Out of the two objects, which is more likely to contain plastic?",
+            "label": 0
+        },
+        "q0168": {
+            "text": "If you had to pick, which object do you think is made of fur?",
+            "label": 0
+        },
+        "q0001": {
+            "text": "Which object looks like it is made out of wood?",
+            "label": 1
+        },
+        "q0207": {
+            "text": "Out of the two objects, which is more likely to contain dirt?",
+            "label": 1
+        },
+        "q0023": {
+            "text": "Which object looks like it is made out of plant?",
+            "label": 1
+        }
+    },
+    "object1027_object0762": {
+        "q0009": {
+            "text": "Out of the two objects, which is more likely to contain plastic?",
+            "label": 1
+        }
+    },
+    "object1420_object1257": {
+        "q0103": {
+            "text": "Which is more likely to be a plant-like object?",
+            "label": 0
+        },
+        "q0048": {
+            "text": "If you had to pick, which object do you think is made of metal?",
+            "label": 1
+        }
+    },
+    "object0107_object0171": {
+        "q0164": {
+            "text": "If you had to pick, which object do you think is made of wax?",
+            "label": 0
+        },
+        "q0009": {
+            "text": "Out of the two objects, which is more likely to contain plastic?",
+            "label": 1
+        }
+    },
+    "object1256_object0373": {
+        "q0000": {
+            "text": "Which object looks like it is made out of paper?",
+            "label": 0
+        },
+        "q0003": {
+            "text": "Which is more likely to be a plastic-like object?",
+            "label": 1
+        }
+    },
+    "object0132_object0161": {
+        "q0071": {
+            "text": "Which object is more likely to be made out of rubber?",
+            "label": 0
+        },
+        "q0025": {
+            "text": "If you had to pick, which object do you think is made of plastic?",
+            "label": 1
+        }
+    },
+    "object1144_object1127": {
+        "q0041": {
+            "text": "Out of the two objects, which is more likely to contain metal?",
+            "label": 0
+        },
+        "q0062": {
+            "text": "Which object is more likely to be made out of textiles?",
+            "label": 1
+        }
+    },
+    "object1415_object0120": {
+        "q0029": {
+            "text": "Which object is more likely to be made out of paper?",
+            "label": 0
+        },
+        "q0006": {
+            "text": "Which item is probably made of plastic?",
+            "label": 0
+        },
+        "q0081": {
+            "text": "If you had to pick, which object do you think is made of ceramic?",
+            "label": 1
+        }
+    },
+    "object1143_object0929": {
+        "q0004": {
+            "text": "Which is more likely to be a textiles-like object?",
+            "label": 0
+        },
+        "q0009": {
+            "text": "Out of the two objects, which is more likely to contain plastic?",
+            "label": 1
+        }
+    },
+    "object0971_object1055": {
+        "q0020": {
+            "text": "Which object is more likely to be made out of metal?",
+            "label": 0
+        },
+        "q0178": {
+            "text": "Which is more likely to be a fur-like object?",
+            "label": 1
+        }
+    },
+    "object0891_object1143": {
+        "q0009": {
+            "text": "Out of the two objects, which is more likely to contain plastic?",
+            "label": 0
+        },
+        "q0002": {
+            "text": "Which object looks like it is made out of textiles?",
+            "label": 1
+        }
+    },
+    "object0170_object0103": {
+        "q0022": {
+            "text": "Which item is probably made of textiles?",
+            "label": 0
+        },
+        "q0046": {
+            "text": "Which object looks like it is made out of rubber?",
+            "label": 1
+        }
+    },
+    "object1414_object1346": {
+        "q0195": {
+            "text": "Which object looks like it is made out of dirt?",
+            "label": 0
+        },
+        "q0103": {
+            "text": "Which is more likely to be a plant-like object?",
+            "label": 0
+        }
+    },
+    "object0132_object0956": {
+        "q0042": {
+            "text": "Which item is probably made of rubber?",
+            "label": 0
+        },
+        "q0026": {
+            "text": "Which is more likely to be a glass-like object?",
+            "label": 1
+        }
+    },
+    "object0097_object0096": {
+        "q0024": {
+            "text": "Which is more likely to be a metal-like object?",
+            "label": 0
+        },
+        "q0036": {
+            "text": "If you had to pick, which object do you think is made of foam?",
+            "label": 1
+        }
+    },
+    "object0107_object0106": {
+        "q0073": {
+            "text": "Which is more likely to be a wax-like object?",
+            "label": 0
+        },
+        "q0103": {
+            "text": "Which is more likely to be a plant-like object?",
+            "label": 1
+        }
+    },
+    "object0109_object0108": {
+        "q0015": {
+            "text": "Which item is probably made of wood?",
+            "label": 0
+        },
+        "q0034": {
+            "text": "Out of the two objects, which is more likely to contain paper?",
+            "label": 1
+        },
+        "q0021": {
+            "text": "Which object looks like it is made out of plastic?",
+            "label": 1
+        }
+    },
+    "object0117_object0116": {
+        "q0079": {
+            "text": "Which is more likely to be a clay-like object?",
+            "label": 0
+        },
+        "q0039": {
+            "text": "Which item is probably made of glass?",
+            "label": 1
+        }
+    },
+    "object0123_object0122": {
+        "q0062": {
+            "text": "Which object is more likely to be made out of textiles?",
+            "label": 0
+        },
+        "q0024": {
+            "text": "Which is more likely to be a metal-like object?",
+            "label": 1
+        }
+    },
+    "object0127_object0126": {
+        "q0005": {
+            "text": "Which is more likely to be a paper-like object?",
+            "label": 0
+        }
+    },
+    "object0131_object0130": {
+        "q0068": {
+            "text": "Which object looks like it is made out of glass?",
+            "label": 0
+        },
+        "q0009": {
+            "text": "Out of the two objects, which is more likely to contain plastic?",
+            "label": 1
+        }
+    },
+    "object0133_object0132": {
+        "q0019": {
+            "text": "Which object is more likely to be made out of plastic?",
+            "label": 0
+        },
+        "q0086": {
+            "text": "Out of the two objects, which is more likely to contain rubber?",
+            "label": 1
+        }
+    },
+    "object0135_object0134": {
+        "q0054": {
+            "text": "Out of the two objects, which is more likely to contain textiles?",
+            "label": 0
+        },
+        "q0024": {
+            "text": "Which is more likely to be a metal-like object?",
+            "label": 1
+        }
+    },
+    "object0143_object0142": {
+        "q0041": {
+            "text": "Out of the two objects, which is more likely to contain metal?",
+            "label": 0
+        },
+        "q0000": {
+            "text": "Which object looks like it is made out of paper?",
+            "label": 1
+        }
+    },
+    "object0151_object0150": {
+        "q0083": {
+            "text": "Which item is probably made of ceramic?",
+            "label": 0
+        },
+        "q0029": {
+            "text": "Which object is more likely to be made out of paper?",
+            "label": 1
+        }
+    },
+    "object0155_object0154": {
+        "q0030": {
+            "text": "Which object is more likely to be made out of wood?",
+            "label": 0
+        },
+        "q0005": {
+            "text": "Which is more likely to be a paper-like object?",
+            "label": 1
+        }
+    },
+    "object0157_object0156": {
+        "q0020": {
+            "text": "Which object is more likely to be made out of metal?",
+            "label": 0
+        },
+        "q0039": {
+            "text": "Which item is probably made of glass?",
+            "label": 1
+        }
+    },
+    "object0173_object0172": {
+        "q0024": {
+            "text": "Which is more likely to be a metal-like object?",
+            "label": 0
+        },
+        "q0208": {
+            "text": "Which object looks like it is made out of powder?",
+            "label": 1
+        }
+    },
+    "object0175_object0174": {
+        "q0038": {
+            "text": "Which object looks like it is made out of stone?",
+            "label": 0
+        },
+        "q0001": {
+            "text": "Which object looks like it is made out of wood?",
+            "label": 1
+        }
+    },
+    "object0177_object0176": {
+        "q0040": {
+            "text": "Which is more likely to be a wood-like object?",
+            "label": 0
+        },
+        "q0005": {
+            "text": "Which is more likely to be a paper-like object?",
+            "label": 1
+        }
+    },
+    "object0301_object0300": {
+        "q0015": {
+            "text": "Which item is probably made of wood?",
+            "label": 0
+        },
+        "q0209": {
+            "text": "Out of the two objects, which is more likely to contain adhesive?",
+            "label": 1
+        },
+        "q0003": {
+            "text": "Which is more likely to be a plastic-like object?",
+            "label": 1
+        }
+    },
+    "object0311_object0310": {
+        "q0072": {
+            "text": "Which item is probably made of stone?",
+            "label": 0
+        },
+        "q0053": {
+            "text": "Which object looks like it is made out of ceramic?",
+            "label": 1
+        }
+    },
+    "object0319_object0318": {
+        "q0065": {
+            "text": "If you had to pick, which object do you think is made of glass?",
+            "label": 0
+        },
+        "q0078": {
+            "text": "Which object is more likely to be made out of clay?",
+            "label": 1
+        }
+    },
+    "object0329_object0328": {
+        "q0182": {
+            "text": "Which object looks like it is made out of gel?",
+            "label": 0
+        },
+        "q0067": {
+            "text": "Which object is more likely to be made out of wax?",
+            "label": 0
+        },
+        "q0006": {
+            "text": "Which item is probably made of plastic?",
+            "label": 1
+        }
+    },
+    "object0335_object0334": {
+        "q0021": {
+            "text": "Which object looks like it is made out of plastic?",
+            "label": 0
+        },
+        "q0010": {
+            "text": "Out of the two objects, which is more likely to contain foam?",
+            "label": 1
+        }
+    },
+    "object0373_object0372": {
+        "q0025": {
+            "text": "If you had to pick, which object do you think is made of plastic?",
+            "label": 0
+        },
+        "q0010": {
+            "text": "Out of the two objects, which is more likely to contain foam?",
+            "label": 1
+        }
+    },
+    "object0762_object0761": {
+        "q0069": {
+            "text": "Out of the two objects, which is more likely to contain wood?",
+            "label": 0
+        },
+        "q0019": {
+            "text": "Which object is more likely to be made out of plastic?",
+            "label": 0
+        },
+        "q0079": {
+            "text": "Which is more likely to be a clay-like object?",
+            "label": 1
+        },
+        "q0088": {
+            "text": "Which is more likely to be a ceramic-like object?",
+            "label": 1
+        }
+    },
+    "object0837_object0836": {
+        "q0029": {
+            "text": "Which object is more likely to be made out of paper?",
+            "label": 0
+        },
+        "q0024": {
+            "text": "Which is more likely to be a metal-like object?",
+            "label": 1
+        }
+    },
+    "object0957_object0956": {
+        "q0003": {
+            "text": "Which is more likely to be a plastic-like object?",
+            "label": 0
+        },
+        "q0068": {
+            "text": "Which object looks like it is made out of glass?",
+            "label": 1
+        }
+    },
+    "object1143_object1142": {
+        "q0054": {
+            "text": "Out of the two objects, which is more likely to contain textiles?",
+            "label": 0
+        },
+        "q0000": {
+            "text": "Which object looks like it is made out of paper?",
+            "label": 1
+        }
+    },
+    "object1171_object1170": {
+        "q0003": {
+            "text": "Which is more likely to be a plastic-like object?",
+            "label": 0
+        },
+        "q0035": {
+            "text": "Which object looks like it is made out of metal?",
+            "label": 1
+        }
+    },
+    "object1209_object1208": {
+        "q0061": {
+            "text": "Out of the two objects, which is more likely to contain wax?",
+            "label": 0
+        },
+        "q0040": {
+            "text": "Which is more likely to be a wood-like object?",
+            "label": 1
+        }
+    },
+    "object1249_object1248": {
+        "q0040": {
+            "text": "Which is more likely to be a wood-like object?",
+            "label": 0
+        },
+        "q0006": {
+            "text": "Which item is probably made of plastic?",
+            "label": 1
+        }
+    },
+    "object1251_object1250": {
+        "q0041": {
+            "text": "Out of the two objects, which is more likely to contain metal?",
+            "label": 0
+        },
+        "q0034": {
+            "text": "Out of the two objects, which is more likely to contain paper?",
+            "label": 1
+        }
+    },
+    "object1257_object1256": {
+        "q0012": {
+            "text": "Which item is probably made of metal?",
+            "label": 0
+        },
+        "q0005": {
+            "text": "Which is more likely to be a paper-like object?",
+            "label": 1
+        }
+    },
+    "object1299_object1298": {
+        "q0134": {
+            "text": "If you had to pick, which object do you think is made of ice?",
+            "label": 0
+        },
+        "q0025": {
+            "text": "If you had to pick, which object do you think is made of plastic?",
+            "label": 1
+        }
+    },
+    "object1309_object1308": {
+        "q0048": {
+            "text": "If you had to pick, which object do you think is made of metal?",
+            "label": 0
+        },
+        "q0029": {
+            "text": "Which object is more likely to be made out of paper?",
+            "label": 1
+        }
+    },
+    "object1341_object1340": {
+        "q0032": {
+            "text": "If you had to pick, which object do you think is made of textiles?",
+            "label": 0
+        },
+        "q0021": {
+            "text": "Which object looks like it is made out of plastic?",
+            "label": 0
+        },
+        "q0048": {
+            "text": "If you had to pick, which object do you think is made of metal?",
+            "label": 1
+        }
+    },
+    "object1347_object1346": {
+        "q0024": {
+            "text": "Which is more likely to be a metal-like object?",
+            "label": 0
+        },
+        "q0040": {
+            "text": "Which is more likely to be a wood-like object?",
+            "label": 1
+        }
+    },
+    "object1421_object1420": {
+        "q0010": {
+            "text": "Out of the two objects, which is more likely to contain foam?",
+            "label": 0
+        },
+        "q0023": {
+            "text": "Which object looks like it is made out of plant?",
+            "label": 1
+        }
+    },
+    "object1299_object0373": {
+        "q0134": {
+            "text": "If you had to pick, which object do you think is made of ice?",
+            "label": 0
+        },
+        "q0009": {
+            "text": "Out of the two objects, which is more likely to contain plastic?",
+            "label": 1
+        }
+    },
+    "object0836_object0153": {
+        "q0024": {
+            "text": "Which is more likely to be a metal-like object?",
+            "label": 0
+        },
+        "q0014": {
+            "text": "Which is more likely to be a foam-like object?",
+            "label": 1
+        }
+    },
+    "object0328_object1208": {
+        "q0021": {
+            "text": "Which object looks like it is made out of plastic?",
+            "label": 0
+        },
+        "q0045": {
+            "text": "If you had to pick, which object do you think is made of wood?",
+            "label": 1
+        }
+    },
+    "object1209_object0096": {
+        "q0067": {
+            "text": "Which object is more likely to be made out of wax?",
+            "label": 0
+        },
+        "q0084": {
+            "text": "Which object looks like it is made out of foam?",
+            "label": 1
+        }
+    },
+    "object0111_object0167": {
+        "q0116": {
+            "text": "If you had to pick, which object do you think is made of goo?",
+            "label": 0
+        },
+        "q0061": {
+            "text": "Out of the two objects, which is more likely to contain wax?",
+            "label": 1
+        }
+    },
+    "object0154_object0138": {
+        "q0017": {
+            "text": "Which item is probably made of paper?",
+            "label": 0
+        },
+        "q0048": {
+            "text": "If you had to pick, which object do you think is made of metal?",
+            "label": 1
+        }
+    },
+    "object0130_object1170": {
+        "q0006": {
+            "text": "Which item is probably made of plastic?",
+            "label": 0
+        },
+        "q0024": {
+            "text": "Which is more likely to be a metal-like object?",
+            "label": 1
+        }
+    },
+    "object0122_object0131": {
+        "q0048": {
+            "text": "If you had to pick, which object do you think is made of metal?",
+            "label": 0
+        },
+        "q0026": {
+            "text": "Which is more likely to be a glass-like object?",
+            "label": 1
+        }
+    },
+    "object0173_object0812": {
+        "q0048": {
+            "text": "If you had to pick, which object do you think is made of metal?",
+            "label": 0
+        },
+        "q0009": {
+            "text": "Out of the two objects, which is more likely to contain plastic?",
+            "label": 1
+        }
+    },
+    "object0309_object0160": {
+        "q0024": {
+            "text": "Which is more likely to be a metal-like object?",
+            "label": 0
+        },
+        "q0025": {
+            "text": "If you had to pick, which object do you think is made of plastic?",
+            "label": 1
+        }
+    },
+    "object0126_object1244": {
+        "q0021": {
+            "text": "Which object looks like it is made out of plastic?",
+            "label": 0
+        },
+        "q0062": {
+            "text": "Which object is more likely to be made out of textiles?",
+            "label": 1
+        },
+        "q0029": {
+            "text": "Which object is more likely to be made out of paper?",
+            "label": 1
+        }
+    },
+    "object1154_object0157": {
+        "q0037": {
+            "text": "Which item is probably made of clay?",
+            "label": 0
+        },
+        "q0088": {
+            "text": "Which is more likely to be a ceramic-like object?",
+            "label": 0
+        },
+        "q0020": {
+            "text": "Which object is more likely to be made out of metal?",
+            "label": 1
+        }
+    },
+    "object0334_object1251": {
+        "q0018": {
+            "text": "Which object is more likely to be made out of foam?",
+            "label": 0
+        },
+        "q0012": {
+            "text": "Which item is probably made of metal?",
+            "label": 1
+        }
+    },
+    "object0129_object1145": {
+        "q0015": {
+            "text": "Which item is probably made of wood?",
+            "label": 0
+        },
+        "q0032": {
+            "text": "If you had to pick, which object do you think is made of textiles?",
+            "label": 0
+        },
+        "q0048": {
+            "text": "If you had to pick, which object do you think is made of metal?",
+            "label": 1
+        }
+    },
+    "object1299_object0170": {
+        "q0100": {
+            "text": "Which object is more likely to be made out of ice?",
+            "label": 0
+        },
+        "q0054": {
+            "text": "Out of the two objects, which is more likely to contain textiles?",
+            "label": 1
+        }
+    },
+    "object1347_object0891": {
+        "q0035": {
+            "text": "Which object looks like it is made out of metal?",
+            "label": 0
+        },
+        "q0025": {
+            "text": "If you had to pick, which object do you think is made of plastic?",
+            "label": 1
+        }
+    },
+    "object1421_object1101": {
+        "q0031": {
+            "text": "Which item is probably made of foam?",
+            "label": 0
+        },
+        "q0086": {
+            "text": "Out of the two objects, which is more likely to contain rubber?",
+            "label": 1
+        }
+    },
+    "object0106_object1056": {
+        "q0092": {
+            "text": "Which object is more likely to be made out of plant?",
+            "label": 0
+        },
+        "q0040": {
+            "text": "Which is more likely to be a wood-like object?",
+            "label": 1
+        }
+    },
+    "object0329_object0130": {
+        "q0123": {
+            "text": "Which object is more likely to be made out of gel?",
+            "label": 0
+        },
+        "q0061": {
+            "text": "Out of the two objects, which is more likely to contain wax?",
+            "label": 0
+        },
+        "q0006": {
+            "text": "Which item is probably made of plastic?",
+            "label": 1
+        }
+    },
+    "object0108_object1208": {
+        "q0034": {
+            "text": "Out of the two objects, which is more likely to contain paper?",
+            "label": 0
+        },
+        "q0009": {
+            "text": "Out of the two objects, which is more likely to contain plastic?",
+            "label": 0
+        },
+        "q0001": {
+            "text": "Which object looks like it is made out of wood?",
+            "label": 1
+        }
+    },
+    "object0330_object0172": {
+        "q0003": {
+            "text": "Which is more likely to be a plastic-like object?",
+            "label": 0
+        },
+        "q0210": {
+            "text": "Out of the two objects, which is more likely to contain powder?",
+            "label": 1
+        }
+    },
+    "object1298_object0150": {
+        "q0021": {
+            "text": "Which object looks like it is made out of plastic?",
+            "label": 0
+        },
+        "q0034": {
+            "text": "Out of the two objects, which is more likely to contain paper?",
+            "label": 1
+        }
+    },
+    "object0128_object1170": {
+        "q0023": {
+            "text": "Which object looks like it is made out of plant?",
+            "label": 0
+        },
+        "q0041": {
+            "text": "Out of the two objects, which is more likely to contain metal?",
+            "label": 1
+        }
+    },
+    "object1027_object1302": {
+        "q0015": {
+            "text": "Which item is probably made of wood?",
+            "label": 0
+        },
+        "q0012": {
+            "text": "Which item is probably made of metal?",
+            "label": 1
+        },
+        "q0021": {
+            "text": "Which object looks like it is made out of plastic?",
+            "label": 1
+        }
+    },
+    "object0128_object0911": {
+        "q0027": {
+            "text": "Which item is probably made of plant?",
+            "label": 0
+        },
+        "q0002": {
+            "text": "Which object looks like it is made out of textiles?",
+            "label": 1
+        }
+    },
+    "object1298_object0301": {
+        "q0019": {
+            "text": "Which object is more likely to be made out of plastic?",
+            "label": 0
+        },
+        "q0040": {
+            "text": "Which is more likely to be a wood-like object?",
+            "label": 1
+        }
+    },
+    "object1421_object1251": {
+        "q0031": {
+            "text": "Which item is probably made of foam?",
+            "label": 0
+        },
+        "q0048": {
+            "text": "If you had to pick, which object do you think is made of metal?",
+            "label": 1
+        }
+    },
+    "object0117_object1100": {
+        "q0077": {
+            "text": "Which object looks like it is made out of clay?",
+            "label": 0
+        },
+        "q0051": {
+            "text": "If you had to pick, which object do you think is made of rubber?",
+            "label": 1
+        }
+    },
+    "object0123_object0318": {
+        "q0054": {
+            "text": "Out of the two objects, which is more likely to contain textiles?",
+            "label": 0
+        },
+        "q0066": {
+            "text": "If you had to pick, which object do you think is made of clay?",
+            "label": 1
+        }
+    },
+    "object0308_object0151": {
+        "q0034": {
+            "text": "Out of the two objects, which is more likely to contain paper?",
+            "label": 0
+        },
+        "q0050": {
+            "text": "Out of the two objects, which is more likely to contain ceramic?",
+            "label": 1
+        }
+    },
+    "object1127_object0970": {
+        "q0002": {
+            "text": "Which object looks like it is made out of textiles?",
+            "label": 0
+        },
+        "q0024": {
+            "text": "Which is more likely to be a metal-like object?",
+            "label": 1
+        }
+    },
+    "object1309_object0300": {
+        "q0048": {
+            "text": "If you had to pick, which object do you think is made of metal?",
+            "label": 0
+        },
+        "q0211": {
+            "text": "Which item is probably made of adhesive?",
+            "label": 1
+        },
+        "q0021": {
+            "text": "Which object looks like it is made out of plastic?",
+            "label": 1
+        }
+    },
+    "object0890_object0139": {
+        "q0025": {
+            "text": "If you had to pick, which object do you think is made of plastic?",
+            "label": 0
+        },
+        "q0026": {
+            "text": "Which is more likely to be a glass-like object?",
+            "label": 1
+        }
+    },
+    "object0319_object0133": {
+        "q0039": {
+            "text": "Which item is probably made of glass?",
+            "label": 0
+        },
+        "q0019": {
+            "text": "Which object is more likely to be made out of plastic?",
+            "label": 1
+        }
+    },
+    "object0348_object0335": {
+        "q0020": {
+            "text": "Which object is more likely to be made out of metal?",
+            "label": 0
+        },
+        "q0025": {
+            "text": "If you had to pick, which object do you think is made of plastic?",
+            "label": 1
+        }
+    },
+    "object0106_object0142": {
+        "q0007": {
+            "text": "If you had to pick, which object do you think is made of plant?",
+            "label": 0
+        },
+        "q0029": {
+            "text": "Which object is more likely to be made out of paper?",
+            "label": 1
+        }
+    },
+    "object0163_object0119": {
+        "q0005": {
+            "text": "Which is more likely to be a paper-like object?",
+            "label": 0
+        },
+        "q0052": {
+            "text": "If you had to pick, which object do you think is made of minerals?",
+            "label": 1
+        }
+    },
+    "object1126_object0986": {
+        "q0119": {
+            "text": "Which item is probably made of wax?",
+            "label": 0
+        },
+        "q0193": {
+            "text": "Which object looks like it is made out of gelatin?",
+            "label": 1
+        }
+    },
+    "object0761_object0168": {
+        "q0037": {
+            "text": "Which item is probably made of clay?",
+            "label": 0
+        },
+        "q0139": {
+            "text": "Which object is more likely to be made out of ceramic?",
+            "label": 0
+        },
+        "q0103": {
+            "text": "Which is more likely to be a plant-like object?",
+            "label": 1
+        }
+    },
+    "object0152_object0175": {
+        "q0071": {
+            "text": "Which object is more likely to be made out of rubber?",
+            "label": 0
+        },
+        "q0047": {
+            "text": "Which object is more likely to be made out of stone?",
+            "label": 1
+        }
+    },
+    "object0126_object0120": {
+        "q0006": {
+            "text": "Which item is probably made of plastic?",
+            "label": 0
+        },
+        "q0088": {
+            "text": "Which is more likely to be a ceramic-like object?",
+            "label": 1
+        }
+    },
+    "object0329_object1341": {
+        "q0138": {
+            "text": "If you had to pick, which object do you think is made of gel?",
+            "label": 0
+        },
+        "q0119": {
+            "text": "Which item is probably made of wax?",
+            "label": 0
+        },
+        "q0004": {
+            "text": "Which is more likely to be a textiles-like object?",
+            "label": 1
+        },
+        "q0003": {
+            "text": "Which is more likely to be a plastic-like object?",
+            "label": 1
+        }
+    },
+    "object1347_object1198": {
+        "q0024": {
+            "text": "Which is more likely to be a metal-like object?",
+            "label": 0
+        },
+        "q0011": {
+            "text": "If you had to pick, which object do you think is made of paper?",
+            "label": 1
+        }
+    },
+    "object0780_object0151": {
+        "q0009": {
+            "text": "Out of the two objects, which is more likely to contain plastic?",
+            "label": 0
+        },
+        "q0053": {
+            "text": "Which object looks like it is made out of ceramic?",
+            "label": 1
+        }
+    },
+    "object0159_object1308": {
+        "q0073": {
+            "text": "Which is more likely to be a wax-like object?",
+            "label": 0
+        },
+        "q0034": {
+            "text": "Out of the two objects, which is more likely to contain paper?",
+            "label": 1
+        }
+    },
+    "object0318_object0097": {
+        "q0077": {
+            "text": "Which object looks like it is made out of clay?",
+            "label": 0
+        },
+        "q0041": {
+            "text": "Out of the two objects, which is more likely to contain metal?",
+            "label": 1
+        }
+    },
+    "object0136_object0779": {
+        "q0036": {
+            "text": "If you had to pick, which object do you think is made of foam?",
+            "label": 0
+        },
+        "q0009": {
+            "text": "Out of the two objects, which is more likely to contain plastic?",
+            "label": 1
+        }
+    },
+    "object1250_object1415": {
+        "q0019": {
+            "text": "Which object is more likely to be made out of plastic?",
+            "label": 1
+        }
+    },
+    "object0139_object0311": {
+        "q0008": {
+            "text": "Which object is more likely to be made out of glass?",
+            "label": 0
+        },
+        "q0047": {
+            "text": "Which object is more likely to be made out of stone?",
+            "label": 1
+        }
+    },
+    "object0957_object0121": {
+        "q0006": {
+            "text": "Which item is probably made of plastic?",
+            "label": 0
+        },
+        "q0139": {
+            "text": "Which object is more likely to be made out of ceramic?",
+            "label": 1
+        }
+    },
+    "object1338_object0169": {
+        "q0006": {
+            "text": "Which item is probably made of plastic?",
+            "label": 0
+        },
+        "q0050": {
+            "text": "Out of the two objects, which is more likely to contain ceramic?",
+            "label": 1
+        }
+    },
+    "object0813_object0169": {
+        "q0032": {
+            "text": "If you had to pick, which object do you think is made of textiles?",
+            "label": 0
+        },
+        "q0035": {
+            "text": "Which object looks like it is made out of metal?",
+            "label": 0
+        },
+        "q0003": {
+            "text": "Which is more likely to be a plastic-like object?",
+            "label": 0
+        },
+        "q0088": {
+            "text": "Which is more likely to be a ceramic-like object?",
+            "label": 1
+        }
+    },
+    "object0349_object0331": {
+        "q0046": {
+            "text": "Which object looks like it is made out of rubber?",
+            "label": 0
+        },
+        "q0029": {
+            "text": "Which object is more likely to be made out of paper?",
+            "label": 0
+        },
+        "q0006": {
+            "text": "Which item is probably made of plastic?",
+            "label": 1
+        }
+    },
+    "object0136_object1248": {
+        "q0084": {
+            "text": "Which object looks like it is made out of foam?",
+            "label": 0
+        },
+        "q0085": {
+            "text": "Out of the two objects, which is more likely to contain plant?",
+            "label": 1
+        },
+        "q0003": {
+            "text": "Which is more likely to be a plastic-like object?",
+            "label": 1
+        }
+    },
+    "object1154_object0911": {
+        "q0037": {
+            "text": "Which item is probably made of clay?",
+            "label": 0
+        },
+        "q0081": {
+            "text": "If you had to pick, which object do you think is made of ceramic?",
+            "label": 0
+        },
+        "q0062": {
+            "text": "Which object is more likely to be made out of textiles?",
+            "label": 1
+        }
+    },
+    "object1257_object0328": {
+        "q0035": {
+            "text": "Which object looks like it is made out of metal?",
+            "label": 0
+        },
+        "q0009": {
+            "text": "Out of the two objects, which is more likely to contain plastic?",
+            "label": 1
+        }
+    },
+    "object1209_object0309": {
+        "q0164": {
+            "text": "If you had to pick, which object do you think is made of wax?",
+            "label": 0
+        },
+        "q0035": {
+            "text": "Which object looks like it is made out of metal?",
+            "label": 1
+        }
+    },
+    "object0166_object0174": {
+        "q0081": {
+            "text": "If you had to pick, which object do you think is made of ceramic?",
+            "label": 0
+        },
+        "q0001": {
+            "text": "Which object looks like it is made out of wood?",
+            "label": 1
+        }
+    },
+    "object1340_object0307": {
+        "q0035": {
+            "text": "Which object looks like it is made out of metal?",
+            "label": 0
+        },
+        "q0011": {
+            "text": "If you had to pick, which object do you think is made of paper?",
+            "label": 1
+        }
+    },
+    "object0957_object0177": {
+        "q0009": {
+            "text": "Out of the two objects, which is more likely to contain plastic?",
+            "label": 0
+        },
+        "q0001": {
+            "text": "Which object looks like it is made out of wood?",
+            "label": 1
+        }
+    },
+    "object0348_object0910": {
+        "q0035": {
+            "text": "Which object looks like it is made out of metal?",
+            "label": 0
+        },
+        "q0030": {
+            "text": "Which object is more likely to be made out of wood?",
+            "label": 1
+        }
+    },
+    "object1303_object0970": {
+        "q0212": {
+            "text": "Which is more likely to be a concrete-like object?",
+            "label": 0
+        },
+        "q0096": {
+            "text": "Which object looks like it is made out of minerals?",
+            "label": 0
+        },
+        "q0048": {
+            "text": "If you had to pick, which object do you think is made of metal?",
+            "label": 1
+        }
+    },
+    "object0152_object0168": {
+        "q0051": {
+            "text": "If you had to pick, which object do you think is made of rubber?",
+            "label": 0
+        },
+        "q0023": {
+            "text": "Which object looks like it is made out of plant?",
+            "label": 1
+        }
+    },
+    "object1250_object0143": {
+        "q0005": {
+            "text": "Which is more likely to be a paper-like object?",
+            "label": 0
+        },
+        "q0024": {
+            "text": "Which is more likely to be a metal-like object?",
+            "label": 1
+        }
+    },
+    "object0837_object1171": {
+        "q0029": {
+            "text": "Which object is more likely to be made out of paper?",
+            "label": 0
+        },
+        "q0006": {
+            "text": "Which item is probably made of plastic?",
+            "label": 1
+        }
+    },
+    "object0117_object0307": {
+        "q0078": {
+            "text": "Which object is more likely to be made out of clay?",
+            "label": 0
+        },
+        "q0011": {
+            "text": "If you had to pick, which object do you think is made of paper?",
+            "label": 1
+        }
+    },
+    "object0122_object0156": {
+        "q0012": {
+            "text": "Which item is probably made of metal?",
+            "label": 0
+        },
+        "q0039": {
+            "text": "Which item is probably made of glass?",
+            "label": 1
+        }
+    },
+    "object0929_object0300": {
+        "q0211": {
+            "text": "Which item is probably made of adhesive?",
+            "label": 1
+        }
+    },
+    "object0837_object1420": {
+        "q0017": {
+            "text": "Which item is probably made of paper?",
+            "label": 0
+        },
+        "q0103": {
+            "text": "Which is more likely to be a plant-like object?",
+            "label": 1
+        }
+    },
+    "object0135_object0160": {
+        "q0054": {
+            "text": "Out of the two objects, which is more likely to contain textiles?",
+            "label": 0
+        },
+        "q0003": {
+            "text": "Which is more likely to be a plastic-like object?",
+            "label": 1
+        }
+    },
+    "object0334_object1205": {
+        "q0010": {
+            "text": "Out of the two objects, which is more likely to contain foam?",
+            "label": 0
+        },
+        "q0004": {
+            "text": "Which is more likely to be a textiles-like object?",
+            "label": 1
+        }
+    },
+    "object0111_object0157": {
+        "q0116": {
+            "text": "If you had to pick, which object do you think is made of goo?",
+            "label": 0
+        },
+        "q0024": {
+            "text": "Which is more likely to be a metal-like object?",
+            "label": 1
+        }
+    }
+}
