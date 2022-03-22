@@ -2,11 +2,11 @@ import sys
 sys.path.append("ast/src/models")
 
 import torch
-torch.manual_seed(6361)
+torch.manual_seed(1251251252)
 import random
-random.seed(735745745)
+random.seed(4342)
 import numpy as np
-np.random.seed(52534)
+np.random.seed(543534)
 import torch.nn as nn
 import transformers
 from transformers import AutoModel, AutoTokenizer, AutoConfig, ViTFeatureExtractor, ViTModel, AdamW, DebertaV2Tokenizer, AlbertTokenizer, AlbertModel
@@ -32,12 +32,11 @@ import argparse
 #######################################
 # Hyperparameters and Other Constants #
 #######################################
-
-parser = argparse.ArgumentParser(description='train late fusion')
+parser = argparse.ArgumentParser(description='Extracting frames and audio')
 parser.add_argument(
         '-data_dir',
         dest='data_dir',
-        default="../dataset/",
+        default="../../dataset/",
         type=str,
         help='Directory containing PACS data'
     )
@@ -55,17 +54,13 @@ parser.add_argument(
         type=int,
         help='Directory containing PACS data'
     )
-parser.add_argument('--audio', action='store_true')
-parser.add_argument('--video', action='store_true')
-parser.add_argument('--text', action='store_true')
-parser.add_argument('--image', action='store_true')
 
 args = parser.parse_args()
-
 devices = ["cuda:0"]
-num = args.run_num
+num = args.num
+if not os.path.isdir(f"logs/{num}"):
+    os.mkdir(f"logs/{num}")
 
-os.makedirs(f"logs/{num}", exist_ok=True)
 
 # TODO: Change to parser args
 LOGGER_FILENAME = f"logs/{num}/log.txt"
@@ -73,22 +68,29 @@ LEARNING_RATE = 0.0005
 WEIGHT_DECAY = 0.00005
 BATCH_SIZE = 32
 WARMUP_PROPORTION = -1
-TOTAL_EPOCHS = 40
-SAVE_PATH = os.path.join(args.save_dir, str(num))
+SAVE_PATH = os.path.join(args.save_dir, args.run_num)
 MID_DIM = 768
 DROPOUT = 0.2
-LOG_INTERVAL = 10
-LR_DROPS = [20, 30]
+LOG_INTERVAL = 100
+LR_DROPS = [10, 15]
+TOTAL_EPOCHS = 20
 NUM_WORKERS = 4
-USE_VID = args.video
-USE_AUDIO = args.audio
-USE_TEXT = args.text
-USE_IMAGE = args.image
-assert USE_AUDIO or USE_TEXT or USE_IMAGE or USE_VID, "Must use at least one modality"
+USE_VID = True
+EVAL_EVERY = 4
+USE_AUDIO = True
+USE_TEXT = True
+USE_IMAGE = True
 VID_FEATS = 2048
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 logger = get_logger(LOGGER_FILENAME)
 
+logger.info(f"Learning rate: {LEARNING_RATE}")
+logger.info(f"Weight decay: {WEIGHT_DECAY}")
+logger.info(f"Batch size: {BATCH_SIZE}")
+logger.info(f"Mid dim: {MID_DIM}")
+logger.info(f"Dropout: {DROPOUT}")
+logger.info(f"LR drops: {LR_DROPS}")
+logger.info(f"Total epochs: {TOTAL_EPOCHS}")
 writer = SummaryWriter(log_dir=f"runs/{num}")
 
 #######################
@@ -97,13 +99,13 @@ writer = SummaryWriter(log_dir=f"runs/{num}")
 
 # Load the text model
 if USE_TEXT:
-    tokenizer = "deberta"
+    tokenizer = "mat_deberta"
     if tokenizer == "albert":
         TEXT_FEATS=768
-    elif tokenizer == "deberta":
+    elif tokenizer == "mat_deberta":
         TEXT_FEATS=1024
 else:
-    tokenizer = "deberta"
+    tokenizer = "mat_deberta"
     TEXT_FEATS = 0
 
 # Load the image model and feature extractor
@@ -125,7 +127,7 @@ else:
 if USE_AUDIO:
     input_tdim = 1024
     audio_model = ASTModel(label_dim=527, input_tdim=input_tdim, imagenet_pretrain=False, audioset_pretrain=False)
-    checkpoint_path = "../pretrained_models/audioset_10_10_0.4593.pth"
+    checkpoint_path = "audioset_10_10_0.4593.pth"
     checkpoint_audio = torch.load(checkpoint_path, map_location=device) 
     checkpoint_audio = {'.'.join(k.split('.')[1:]): v for k, v in list(checkpoint_audio.items())}
     audio_model.load_state_dict(checkpoint_audio)
@@ -172,9 +174,8 @@ else:
 # Load the Dataset #
 ####################
 
-train_q_transform = transforms.Compose([PreTokenize(tokenizer), RandomFlipQ()])
+train_q_transform = transforms.Compose([PreTokenize(tokenizer, data_root="../dataset/json"), RandomFlipQ()])
 train_img_transform = transforms.Compose([
-        # transforms.Resize(256, interpolation=Image.BICUBIC),
         transforms.RandomHorizontalFlip(p=0.5),
         transforms.RandomResizedCrop((224,224), (0.85, 1.0), ratio=(1.0,1.0)),
         transforms.ColorJitter(brightness=0.1, contrast=0.1, saturation=0.1, hue=0.05),
@@ -195,10 +196,10 @@ else:
 
 train_audio_conf = {'num_mel_bins': 128, 'target_length': 1024, 'freqm': 48, 'timem': 144, 'mode': 'train', 'dataset': 'audioset', 'mean': -4.2677393, 'std': 4.5689974, 'noise': True}
 
-train_dataset = PACSFusionDataset(args.data_dir, "train_data", train_audio_conf, img_transform=train_img_transform, q_transform=train_q_transform, v_transform=train_v_transform, use_vid=USE_VID, use_audio=USE_AUDIO)
-train_dataloader = torch.utils.data.DataLoader(train_dataset, batch_size=BATCH_SIZE, shuffle=True, num_workers=NUM_WORKERS, drop_last=True)
+train_dataset = PACSFusionDataset("../dataset/", "train_data_mat_small", train_audio_conf, img_transform=train_img_transform, q_transform=train_q_transform, v_transform=train_v_transform, use_vid=USE_VID, use_audio=USE_AUDIO)
+train_dataloader = torch.utils.data.DataLoader(train_dataset, batch_size=BATCH_SIZE, shuffle=True, num_workers=NUM_WORKERS)
 
-val_q_transform = transforms.Compose([PreTokenize(tokenizer)])
+val_q_transform = transforms.Compose([PreTokenize(tokenizer, data_root="../dataset/json")])
 val_img_transform = transforms.Compose([
         transforms.Resize(224, interpolation=Image.BICUBIC),
         transforms.CenterCrop(224),
@@ -221,8 +222,11 @@ else:
 
 val_audio_conf = {'num_mel_bins': 128, 'target_length': 1024, 'freqm': 0, 'timem': 0,'mode': 'test', 'dataset': 'audioset', 'mean': -4.2677393, 'std': 4.5689974, 'noise' : False}
 
-val_dataset = PACSFusionDataset(args.data_dir, "train_data", val_audio_conf, img_transform=val_img_transform, q_transform=val_q_transform, v_transform=val_v_transform, test_mode=True, random_shift=False, use_vid=USE_VID, use_audio=USE_AUDIO)
+val_dataset = PACSFusionDataset("../dataset/", "val_data_mat_small", val_audio_conf, img_transform=val_img_transform, q_transform=val_q_transform, v_transform=val_v_transform, test_mode=True, random_shift=False, use_vid=USE_VID, use_audio=USE_AUDIO)
 val_dataloader = torch.utils.data.DataLoader(val_dataset, batch_size=BATCH_SIZE, shuffle=False, num_workers=NUM_WORKERS)
+
+test_dataset = PACSFusionDataset("../dataset/", "test_data_mat_small", val_audio_conf, img_transform=val_img_transform, q_transform=val_q_transform, v_transform=val_v_transform, test_mode=True, random_shift=False, use_vid=USE_VID, use_audio=USE_AUDIO)
+test_dataloader = torch.utils.data.DataLoader(test_dataset, batch_size=BATCH_SIZE, shuffle=False, num_workers=NUM_WORKERS)
 
 logger.info("Dataset loaded")
 
@@ -242,6 +246,8 @@ logger.info("Model loaded")
 
 total_iters = 0
 best_val_acc = 0
+best_test_acc = 0
+best_avg_acc = 0
 
 for epoch in range(TOTAL_EPOCHS):
 
@@ -306,55 +312,55 @@ for epoch in range(TOTAL_EPOCHS):
             prev_loss = 0
             prev_correct = 0
     
-    # Validation
-    model.eval()
-    with torch.no_grad():
-        val_loss = 0
-        val_total = 0
-        val_correct = 0
+    if epoch % EVAL_EVERY == EVAL_EVERY-1:
+        # Validation
+        model.eval()
+        with torch.no_grad():
+            val_loss = 0
+            val_total = 0
+            val_correct = 0
 
-        for i, data in enumerate(val_dataloader):
-            img1 = data["img1"]
-            img2 = data["img2"]
-            vid1 = data["vid1"]
-            vid2 = data["vid2"]
-            audio1 = data["audio1"]
-            audio2 = data["audio2"]
-            embeds = data["embeddings"]
-            label = data["label"]
+            for i, data in enumerate(val_dataloader):
+                img1 = data["img1"]
+                img2 = data["img2"]
+                vid1 = data["vid1"]
+                vid2 = data["vid2"]
+                audio1 = data["audio1"]
+                audio2 = data["audio2"]
+                embeds = data["embeddings"]
+                label = data["label"]
 
-            img1 = img1.to(device)
-            img2 = img2.to(device)
-            vid1 = vid1.to(device)
-            vid2 = vid2.to(device)
-            audio1 = audio1.to(device)
-            audio2 = audio2.to(device)
-            embeds = embeds.to(device)
-            label = label.float().to(device)
+                img1 = img1.to(device)
+                img2 = img2.to(device)
+                vid1 = vid1.to(device)
+                vid2 = vid2.to(device)
+                audio1 = audio1.to(device)
+                audio2 = audio2.to(device)
+                embeds = embeds.to(device)
+                label = label.float().to(device)
 
-            oup = model(embeds, img1, vid1, audio1, img2, vid2, audio2)
-            pred = torch.sigmoid(oup)
-            oup = oup.squeeze()
+                oup = model(embeds, img1, vid1, audio1, img2, vid2, audio2)
+                pred = torch.sigmoid(oup)
+                oup = oup.squeeze()
+                loss = loss_fn(oup.squeeze(), label)
 
-            loss = loss_fn(oup.squeeze(), label)
+                preds = (pred.squeeze() > 0.5)
+                val_total += label.size(0)
+                val_correct += (preds == label).sum().item()
+                val_loss += loss.item()
 
-            preds = (pred.squeeze() > 0.5)
-            val_total += label.size(0)
-            val_correct += (preds == label).sum().item()
-            val_loss += loss.item()
+            logger.info("Epoch {}: Val loss: {}, Val acc: {}".format(epoch, val_loss / len(val_dataloader), val_correct/val_total))
 
-        logger.info("Epoch {}: Val loss: {}, Val acc: {}".format(epoch, val_loss / len(val_dataloader), val_correct/val_total))
+            writer.add_scalar('Val/Loss', val_loss / len(val_dataloader), epoch)
+            writer.add_scalar('Val/Acc', val_correct/val_total, epoch)
 
-        writer.add_scalar('Val/Loss', val_loss / len(val_dataloader), epoch)
-        writer.add_scalar('Val/Acc', val_correct/val_total, epoch)
+            if val_correct/val_total > best_val_acc:
+                best_val_acc = val_correct/val_total
+                SAVE = True
 
-        if val_correct/val_total > best_val_acc:
-            best_val_acc = val_correct/val_total
-            SAVE =True
-
-    # Save the model
-    if SAVE:
-        torch.save(model.state_dict(), os.path.join(SAVE_PATH, f"model_{num}_{epoch}.pt"))
-        logger.info("Model saved to {}".format(SAVE_PATH))
+        # Save the model
+        if SAVE:
+            torch.save(model.state_dict(), os.path.join(SAVE_PATH, f"model_{num}_{epoch}.pt"))
+            logger.info("Model saved to {}".format(SAVE_PATH))
     
     scheduler.step()

@@ -8,11 +8,11 @@ The creators of UNITER provide a Docker image for easier reproduction. Please in
 
 The following steps were tested using a Titan Xp. Other GPUs from this generation and earlier will work, but I wasn't able to use the original UNITER docker images provided to run it on newer GPUs such as an RTX 3090.
 
-## Setup
+## Dataset Setup
 
-1. We must first preprocess the data
+We must first preprocess some data:
 
-   First, create a text_db by running
+1. Create a text_db by running
 
    ```bash
    docker run --ipc=host --rm -it \
@@ -23,7 +23,7 @@ The following steps were tested using a Titan Xp. Other GPUs from this generatio
            python prepro_pacs.py 
    ```
 
-   Then, go into the docker file
+2. There are two options. The easiest way to get the npz files is to download and extract the tar file from [here](https://drive.google.com/file/d/12_rOFFqki763AHYyIqQujHwrQOXoqWPs/view?usp=sharing). Alternatively, you can go into the docker file
 
    ```
    nvidia-docker run --gpus '"'device=0'"' --ipc=host --rm -it \
@@ -36,7 +36,7 @@ The following steps were tested using a Titan Xp. Other GPUs from this generatio
 
    python tools/generate_pacs_npz.py
 
-   Finally, run
+3. run
 
    ```
    export PATH_TO_STORAGE=YOUR_PATH_TO_STORAGE
@@ -81,13 +81,17 @@ The following steps were tested using a Titan Xp. Other GPUs from this generatio
    └── txt2img.json
 
    There may be missing folders, and in that case, create them to avoid errors.
-2. Download the pretrained model using
+   
+   
+4. Download the pretrained model using
 
 ```
 bash scripts/download_pretrained.sh $PATH_TO_STORAGE
 ```
 
-3. Launch the Docker container for running the experiments.
+## Training
+
+Launch the Docker container for running the experiments.
 
 ```bash
 # docker image should be automatically pulled
@@ -100,16 +104,21 @@ Note that the source code is mounted into the container under `/src` instead
 of built into the image so that user modification will be reflected without
 re-building the image. (Data folders are mounted into the container separately
 for flexibility on folder structures.)
-4. Run finetuning for PACS
+
+To finetune PACS, use the following command:
 
 ```bash
    python train_pacs.py --config config/train-pacs-large.json
 ```
 
-5. Run inference for the NLVR2 task and then evaluate.
+To run inference on PACS, run:
 
    ```bash
    # inference
    python inf_pacs.py --txt_db /txt/pacs_test.db/ --img_db /img// \
        --train_dir /storage/pacs-large/ --ckpt 8000 --output_dir . --fp16
    ```
+
+## Acknowledgements
+
+The code was adapted from [https://github.com/ChenRocks/UNITER](https://github.com/ChenRocks/UNITER), so we would like to thank Yen-Chun Chen and all other contributors of the repository.

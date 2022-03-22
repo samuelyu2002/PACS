@@ -1,7 +1,6 @@
-This file details instructions needed to setup the merlot reserve experiments. Unfortunately, finetuning the model requires TPUs.
+This file details instructions needed to setup the merlot reserve experiments. Unfortunately, finetuning the model currently requires TPUs.
 
 First, set up a conda environment locally:
-
 
 ```bash
 conda create --name mreserve python=3.8 && conda activate mreserve
@@ -19,11 +18,11 @@ pip install numpy==1.19.5
 pip install -r requirements.txt
 ```
 
-
-
 **Setting up the Dataset**
 
-First, you must edit line 38 in the finetune/prep_data.py file, and enter the directory where the entire dataset is stored. Once you do that, run:
+You can download the premade tfrecord files [here](https://drive.google.com/file/d/1QRx-L_rW-1SkhwofluYFY23jO0R17tow/view?usp=sharing). 
+
+Alternatively, you can replicate our preprocessing steps. First, you must edit line 38 in the finetune/prep_data.py file, and enter the directory where the entire dataset is stored. Once you do that, run:
 
 sh finetune/prep_data.sh 
 
@@ -34,7 +33,6 @@ Once the tfrecord files have been created, you should upload the tfrecord files 
 **Training**
 
 As mentioned previously, training requires TPUs, so first, you must follow these instructions:
-
 
 First, create a google cloud machine (which has access to the needed API to create your Cloud TPU VM)
 * Create machine configuration with `Compute-optimized` and `c2-standard-4` in your desired region
@@ -92,3 +90,7 @@ python3 pacs_finetune_audio.py ../../pretrain/configs/large.yaml ../../large_res
 ```
 
 To train versions with and without audio, and base and large models.
+
+## Acknowledgements
+
+The code was adapted from [https://github.com/rowanz/merlot_reserve](https://github.com/rowanz/merlot_reserve), so we would like to thank Rowan Zellers and all other contributors of the repository.

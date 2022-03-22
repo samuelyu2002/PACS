@@ -1,13 +1,12 @@
 import torch
 import numpy as np
 import random
-torch.random.manual_seed(1234)
-np.random.seed(1234)
-random.seed(1234)
+torch.random.manual_seed(3264315)
+np.random.seed(5345)
+random.seed(2754754)
 import torch.nn as nn
 import torch.utils.tensorboard as tensorboard
 from model import AudioCLIPFinetune
-import argparse
 
 from utils_extra import get_logger, load_model
 from dataset import PACSImageAudioDataset
@@ -19,12 +18,13 @@ import os
 from PIL import Image
 import shutil
 import utils.transforms as audio_transforms
+import argparse
 
 parser = argparse.ArgumentParser(description='Extracting frames and audio')
 parser.add_argument(
         '-data_dir',
         dest='data_dir',
-        default="../dataset/",
+        default="../../dataset/",
         type=str,
         help='Directory containing PACS data'
     )
@@ -44,10 +44,7 @@ parser.add_argument(
     )
 
 args = parser.parse_args()
- 
 
-# TODO: make params into parser arguments
-# PARAMS
 num = args.run_num
 LOGGER_FILENAME = f"logs/{num}/train.txt"
 MODEL_FILENAME = 'AudioCLIP-Partial-Training.pt'
@@ -55,15 +52,20 @@ BATCH_SIZE = 64
 LEARNING_RATE = 0.0001
 WEIGHT_DECAY = 0.00001
 WARMUP_PROPORTION = -1
-TOTAL_EPOCHS = 40
+TOTAL_EPOCHS = 10
 DATA_DIR = args.data_dir
 INPUT_SIZE = 224
-LR_DROPS = [20, 30]
-SAVE_PATH = os.path.join(args.save_dir, str(num))
-os.makedirs(SAVE_PATH, exist_ok=True)
+LR_DROPS = [6, 8]
+USE_IMAGE=True
+VAL_EVERY = 1
+SAVE_PATH = os.path.join(args.save_dir, args.run_num)
 writer = tensorboard.SummaryWriter(log_dir=f"runs/{num}")
 
-os.makedirs(f"logs/{num}", exist_ok=True)
+os.makedirs(SAVE_PATH, exists_ok=True)
+os.makedirs("runs", exists_ok=True)
+writer = tensorboard.SummaryWriter(log_dir=f"runs/{num}")
+
+os.makedirs(f"logs/{num}", exists_ok=True)
 
 device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 logger = get_logger(LOGGER_FILENAME)
@@ -77,6 +79,7 @@ for param in audio_model.parameters():
     param.requires_grad = False
 
 model.audio_model = audio_model.audio
+
 model.text_projection = nn.Parameter(torch.empty(512, 512))
 nn.init.normal_(model.text_projection, std=512 ** -0.5)
 model.text_projection.data = model.text_projection.data.half()
@@ -127,7 +130,7 @@ train_second_transform = transforms.Compose([
 
 train_audio_transform = transforms.Compose([
         audio_transforms.ToTensor1D(),
-        # audio_transforms.RandomScale(),
+        audio_transforms.RandomScale(),
         audio_transforms.RandomCrop(out_len=44100*5), 
         audio_transforms.RandomPadding(out_len=44100*5),
         audio_transforms.RandomNoise(p=0.8),
@@ -135,7 +138,7 @@ train_audio_transform = transforms.Compose([
 ])
 
 train_q_transform = None
-train_dataset = PACSImageAudioDataset(DATA_DIR, "train_data", img_transform=train_img_transform, q_transform=train_q_transform, second_transform=train_second_transform, audio_transform=train_audio_transform, extra_imgs=True)
+train_dataset = PACSImageAudioDataset(DATA_DIR, "train_data_mat", img_transform=train_img_transform, q_transform=train_q_transform, second_transform=train_second_transform, audio_transform=train_audio_transform, extra_imgs=True)
 train_dataloader = torch.utils.data.DataLoader(train_dataset, batch_size=BATCH_SIZE, shuffle=True, num_workers=8)
 
 val_img_transform = transforms.Compose([
@@ -152,14 +155,21 @@ val_audio_transform = transforms.Compose([
         ])
 
 val_q_transform = None
-val_dataset = PACSImageAudioDataset(DATA_DIR, "val_data", img_transform=val_img_transform, q_transform=val_q_transform, test_mode=True, audio_transform=val_audio_transform)
+val_dataset = PACSImageAudioDataset(DATA_DIR, "val_data_mat", img_transform=val_img_transform, q_transform=val_q_transform, test_mode=True, audio_transform=val_audio_transform)
 val_dataloader = torch.utils.data.DataLoader(val_dataset, batch_size=BATCH_SIZE, shuffle=False, num_workers=8)
+test_dataset = PACSImageAudioDataset(DATA_DIR, "test_data_mat", img_transform=val_img_transform, q_transform=val_q_transform, test_mode=True, audio_transform=val_audio_transform)
+test_dataloader = torch.utils.data.DataLoader(test_dataset, batch_size=BATCH_SIZE, shuffle=False, num_workers=8)
 
 train_losses = []
 train_accs = []
 val_losses = []
 val_accs = []
+test_losses = []
+test_accs = []
+
+best_avg_acc = 0
 best_val_acc = 0
+best_test_acc = 0
 
 for epoch in range(TOTAL_EPOCHS):
     SAVE = False
@@ -211,7 +221,7 @@ for epoch in range(TOTAL_EPOCHS):
 
     # Validation
     model.eval()
-    if epoch % 1 == 0:
+    if epoch % VAL_EVERY == VAL_EVERY-1:
         with torch.no_grad():
             val_loss = 0
             val_total = 0
