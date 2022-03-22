@@ -63,6 +63,6 @@ If you used this repository, please consider citing us:
       year={2022},
       eprint={2203.11130},
       archivePrefix={arXiv},
-      primaryClass={cs.ML}
+      primaryClass={cs.LG}
 }
 ```
