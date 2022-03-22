@@ -2,7 +2,7 @@
 
 This folder contains code for the baslines models we ran on PACS, and additional code to run PACS-material. The results on PACS are as follows:
 
-| **Model**                                                                                     | **With Audio (%)** | **Without Audio (%)** | **\Delta** |
+| **Model**                                                                                     | **With Audio (%)** | **Without Audio (%)** | **Δ** |
 |-----------------------------------------------------------------------------------------------|:--------------------:|:-----------------------:|:--------------:|
 | Fusion (I+A+V)                                                                                | 51.9 ± 1.1     | -                     | -            |
 | Fusion (Q+I)                                                                                  | -                  | 51.2 ± 0.8        | -            |
