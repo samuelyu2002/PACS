@@ -39,7 +39,7 @@ We also provide a couple of other components to download, which are necessary to
 To run baseline models, visit the experiments folder. We have currently benchmarked the following models:
 
 | **Model**                                                                                     | **With Audio (%)** | **Without Audio (%)** | **\Delta** |
-|-----------------------------------------------------------------------------------------------|--------------------|-----------------------|--------------|
+|-----------------------------------------------------------------------------------------------|:--------------------:|:-----------------------:|:--------------:|
 | Fusion (I+A+V)                                                                                | 51.9 ± 1.1     | -                     | -            |
 | Fusion (Q+I)                                                                                  | -                  | 51.2 ± 0.8        | -            |
 | Fusion (Q+A)                                                                                  | 50.9 ± 0.6     | -                     | -            |
