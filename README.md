@@ -1,6 +1,6 @@
-# PACS
+# PACS: A Dataset for Physical Audiovisual Common-Sense Reasoning
 
-This repository contains data and code for the paper [PACS: A Dataset for Physical Audiovisual CommonSense Reasoning](https://arxiv.org/pdf/2203.11130.pdf). 
+This repository contains data and code for our paper [PACS: A Dataset for Physical Audiovisual CommonSense Reasoning](https://arxiv.org/pdf/2203.11130.pdf). 
 
 ![Sample Datapoints](images/main_fig.png)
 
@@ -21,18 +21,15 @@ pip3 install torch==1.11.0+cu113 torchvision==0.12.0+cu113 torchaudio==0.11.0+cu
 ```
 ## Dataset Download
 
-To download the dataset, run:
+The dataset is available for download [here](https://drive.google.com/drive/folders/1TjOKBTU9dsytHJIb919V4wXFR1Zm5TsJ?usp=sharing).
+
+Alternatively, if you want to replicate the original download steps, you can run the following code (this will take a while):
 
 ```
 cd dataset/scripts
 python3 download.py -data_dir PATH_TO_DATA_STORAGE_HERE
 python3 preprocess.py -data_dir PATH_TO_DATA_STORAGE_HERE
 ```
-
-We also provide a couple of other components to download, which are necessary to run certain models:
-
-1. Download and extract a set npz files [here](https://drive.google.com/file/d/12_rOFFqki763AHYyIqQujHwrQOXoqWPs/view?usp=sharing) (for UNITER)
-2. Download and extract a set of tfrecord files containing data [here](https://drive.google.com/file/d/1QRx-L_rW-1SkhwofluYFY23jO0R17tow/view?usp=sharing) (for Merlot-Reserve)
 
 ## Baseline Models
 
