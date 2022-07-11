@@ -21,7 +21,6 @@ parser = argparse.ArgumentParser(description='Extracting frames and audio')
 parser.add_argument(
         '-data_dir',
         dest='data_dir',
-        default="../../dataset/",
         type=str,
         help='Directory containing PACS data'
     )

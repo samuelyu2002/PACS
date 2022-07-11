@@ -36,7 +36,6 @@ parser = argparse.ArgumentParser(description='Extracting frames and audio')
 parser.add_argument(
         '-data_dir',
         dest='data_dir',
-        default="../../dataset/",
         type=str,
         help='Directory containing PACS data'
     )
@@ -222,10 +221,10 @@ else:
 
 val_audio_conf = {'num_mel_bins': 128, 'target_length': 1024, 'freqm': 0, 'timem': 0,'mode': 'test', 'dataset': 'audioset', 'mean': -4.2677393, 'std': 4.5689974, 'noise' : False}
 
-val_dataset = PACSFusionDataset("../dataset/", "val_data_mat_small", val_audio_conf, img_transform=val_img_transform, q_transform=val_q_transform, v_transform=val_v_transform, test_mode=True, random_shift=False, use_vid=USE_VID, use_audio=USE_AUDIO)
+val_dataset = PACSFusionDataset("../dataset/", "val_data_mat", val_audio_conf, img_transform=val_img_transform, q_transform=val_q_transform, v_transform=val_v_transform, test_mode=True, random_shift=False, use_vid=USE_VID, use_audio=USE_AUDIO)
 val_dataloader = torch.utils.data.DataLoader(val_dataset, batch_size=BATCH_SIZE, shuffle=False, num_workers=NUM_WORKERS)
 
-test_dataset = PACSFusionDataset("../dataset/", "test_data_mat_small", val_audio_conf, img_transform=val_img_transform, q_transform=val_q_transform, v_transform=val_v_transform, test_mode=True, random_shift=False, use_vid=USE_VID, use_audio=USE_AUDIO)
+test_dataset = PACSFusionDataset("../dataset/", "test_data_mat", val_audio_conf, img_transform=val_img_transform, q_transform=val_q_transform, v_transform=val_v_transform, test_mode=True, random_shift=False, use_vid=USE_VID, use_audio=USE_AUDIO)
 test_dataloader = torch.utils.data.DataLoader(test_dataset, batch_size=BATCH_SIZE, shuffle=False, num_workers=NUM_WORKERS)
 
 logger.info("Dataset loaded")

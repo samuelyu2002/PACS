@@ -28,7 +28,7 @@ parser.add_argument(
 parser.add_argument(
         '-split',
         dest='split',
-        default="test",
+        default="test_data",
         type=str,
         help='which split to predict'
     )
@@ -62,8 +62,7 @@ img_transform2 = transforms.Compose([
 
 similarities = defaultdict(dict)
 
-
-test_data = json.load(open(f"{DATA_DIR}/json/{SPLIT}.json", 'r'))
+test_data = json.load(open(os.path.join(DATA_DIR, "json", f"{SPLIT}.json"), 'r'))
 
 with torch.no_grad():
     model.eval()

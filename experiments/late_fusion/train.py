@@ -37,7 +37,6 @@ parser = argparse.ArgumentParser(description='train late fusion')
 parser.add_argument(
         '-data_dir',
         dest='data_dir',
-        default="../../dataset/",
         type=str,
         help='Directory containing PACS data'
     )
