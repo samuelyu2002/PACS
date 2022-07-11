@@ -32,7 +32,14 @@ parser.add_argument(
 parser.add_argument(
         '-split',
         dest='split',
-        default="test",
+        default="test_data",
+        type=str,
+        help='which split to predict'
+    )
+
+parser.add_argument(
+        '-data_dir',
+        dest='data_dir',
         type=str,
         help='which split to predict'
     )
@@ -42,7 +49,7 @@ args = parser.parse_args()
 PRELOAD = "assets/AudioCLIP-Partial-Training.pt"
 MODEL_PATH = args.model_path
 
-PRE_LOAD = "ViT-B-16.pt"
+PRE_LOAD = "assets/ViT-B-16.pt"
 DATA_DIR = args.data_dir
 SPLIT = args.split
 
@@ -82,17 +89,16 @@ with torch.no_grad():
     model.eval()
     correct = 0
     total = 0
-    correct0 = 0
-    total0 = 0
-    correct1 = 0
-    total1 = 0
     for pair in test_data:
         obj1, obj2 = pair.split("_")
         img1 = Image.open(f"{DATA_DIR}/square_crop/{obj1}.png")
         img2 = Image.open(f"{DATA_DIR}/square_crop/{obj2}.png")
 
-        img1 = img_transform(img1)
-        img2 = img_transform(img2)
+        img1 = img_transform(img1).to(device)
+        img2 = img_transform(img2).to(device)
+
+        img1 = img1.reshape(1,3,224,224)
+        img2 = img2.reshape(1,3,224,224)
 
         audio1, _ = librosa.load(os.path.join(DATA_DIR, "audio44100", obj1 + ".wav"), sr=44100, mono=True, dtype=np.float32)
         audio2, _ = librosa.load(os.path.join(DATA_DIR, "audio44100", obj2 + ".wav"), sr=44100, mono=True, dtype=np.float32)
@@ -124,19 +130,13 @@ with torch.no_grad():
 
             if test_data[pair][q]["label"] == 0:
                 if cs1 > cs2:
-                    correct0 += 1
-                    correct += 1
-                total0 += 1
-                
+                    correct += 1 
             elif test_data[pair][q]["label"] == 1:
                 if cs1 < cs2:
-                    correct1 += 1
                     correct += 1
-                total1 += 1
+
             total += 1
 
 print(correct, total, correct/total)
-print(correct0, total0, correct0/total0)
-print(correct1, total1, correct1/total1)
         
 json.dump(dict(similarities), open(os.path.join(args.save_dir, f"preds_{SPLIT}.json"), 'w'))

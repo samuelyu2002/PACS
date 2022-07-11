@@ -24,7 +24,6 @@ parser = argparse.ArgumentParser(description='Extracting frames and audio')
 parser.add_argument(
         '-data_dir',
         dest='data_dir',
-        default="../../dataset/",
         type=str,
         help='Directory containing PACS data'
     )
@@ -177,7 +176,7 @@ for epoch in range(TOTAL_EPOCHS):
         audio1 = data["audio1"].to(device)
         audio2 = data["audio2"].to(device)
         token = data["tokens"].to(device)
-
+        
         objf1, objf2, textf1 = model(img1, audio1, img2, audio2, token)
         loss = loss_fn(textf1, objf2, objf1)
         cs1 = nn.CosineSimilarity()(textf1, objf1)

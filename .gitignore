@@ -127,3 +127,13 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+dataset/*
+!dataset/json
+!dataset/scripts
+dataset/scripts/preprocess2.py
+experiments/*/runs
+experiments/*/results
+experiments/*/logs
+experiments/AudioCLIP/predict2.py
+new_res.ods
