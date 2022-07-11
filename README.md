@@ -1,6 +1,6 @@
 # PACS: A Dataset for Physical Audiovisual Common-Sense Reasoning
 
-This repository contains data and code for the paper [PACS: A Dataset for Physical Audiovisual CommonSense Reasoning](https://arxiv.org/pdf/2203.11130.pdf). 
+This repository contains data and code for our paper [PACS: A Dataset for Physical Audiovisual CommonSense Reasoning](https://arxiv.org/pdf/2203.11130.pdf). 
 
 ![Sample Datapoints](images/main_fig.png)
 
