@@ -22,47 +22,64 @@ import utils.transforms as audio_transforms
 
 parser = argparse.ArgumentParser(description='Extracting frames and audio')
 parser.add_argument(
-        '-data_dir',
-        dest='data_dir',
-        type=str,
-        help='Directory containing PACS data'
-    )
+    '--data_dir',
+    type=str,
+)
 parser.add_argument(
-        '-save_path',
-        dest='save_dir',
-        default="logs/",
-        type=str,
-        help='Directory containing PACS data'
-    )
+    '--save_path',
+    default="logs/",
+    type=str
+)
 parser.add_argument(
-        '-run_num',
-        dest='run_num',
-        default=1,
-        type=int,
-        help='Directory containing PACS data'
-    )
+    '--run_num',
+    default=1,
+    type=int,
+)
+parser.add_argument(
+    '--model_filename',
+    default='AudioCLIP-Partial-Training.pt',
+    type=str
+)
+parser.add_argument(
+    '--batch_size',
+    default=64,
+    type=int,
+)
+parser.add_argument(
+    '--lr',
+    default=1e-4,
+    type=float,
+)
+parser.add_argument(
+    '--wd',
+    default=1e-5,
+    type=float,
+)
+parser.add_argument(
+    '--num_epochs',
+    default=40,
+    type=int,
+)
+parser.add_argument(
+    '--lr_steps',
+    nargs='+',
+    default=[20,30],
+    type=int,
+)
+parser.add_argument(
+    '--gamma',
+    default=0.1,
+    type=int,
+)
 
 args = parser.parse_args()
- 
 
-# TODO: make params into parser arguments
-# PARAMS
-num = args.run_num
-LOGGER_FILENAME = f"logs/{num}/train.txt"
-MODEL_FILENAME = 'AudioCLIP-Partial-Training.pt'
-BATCH_SIZE = 64
-LEARNING_RATE = 0.0001
-WEIGHT_DECAY = 0.00001
-WARMUP_PROPORTION = -1
-TOTAL_EPOCHS = 40
-DATA_DIR = args.data_dir
-INPUT_SIZE = 224
-LR_DROPS = [20, 30]
-SAVE_PATH = os.path.join(args.save_dir, str(num))
+LOGGER_FILENAME = os.path.join(args.save_path, args.run_num, 'train.txt')
+SAVE_PATH = os.path.join(args.save_dir, str(args.run_num))
 os.makedirs(SAVE_PATH, exist_ok=True)
-writer = tensorboard.SummaryWriter(log_dir=f"runs/{num}")
+writer = tensorboard.SummaryWriter(log_dir=f"runs/{args.run_num}")
 
-os.makedirs(f"logs/{num}", exist_ok=True)
+os.makedirs(f"logs/{args.run_num}", exist_ok=True)
 
 device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 logger = get_logger(LOGGER_FILENAME)
@@ -71,7 +88,7 @@ logger = get_logger(LOGGER_FILENAME)
 model = load_model("assets/ViT-B-16.pt", device)
 logger.info("Model loaded")
 
-audio_model = AudioCLIPFinetune(pretrained=f'assets/{MODEL_FILENAME}')
+audio_model = AudioCLIPFinetune(pretrained=f'assets/{args.model_filename}')
 for param in audio_model.parameters():
     param.requires_grad = False
 
@@ -100,8 +117,8 @@ for name, param in model.named_parameters():
 model = model.to(device)
 
 # Prepare the optimizer
-optimizer = AdamW(model.parameters(), lr=LEARNING_RATE, weight_decay=WEIGHT_DECAY)
-scheduler = optim.lr_scheduler.MultiStepLR(optimizer, milestones=LR_DROPS, gamma=0.2)
+optimizer = AdamW(model.parameters(), lr=args.lr, weight_decay=args.wd)
+scheduler = optim.lr_scheduler.MultiStepLR(optimizer, milestones=args.lr_steps, gamma=args.gamma)
 
 # Loss function
 loss_fn = nn.TripletMarginWithDistanceLoss(distance_function=nn.CosineSimilarity(), margin=1)
@@ -134,8 +151,8 @@ train_audio_transform = transforms.Compose([
 ])
 
 train_q_transform = None
-train_dataset = PACSImageAudioDataset(DATA_DIR, "train_data", img_transform=train_img_transform, q_transform=train_q_transform, second_transform=train_second_transform, audio_transform=train_audio_transform, extra_imgs=True)
-train_dataloader = torch.utils.data.DataLoader(train_dataset, batch_size=BATCH_SIZE, shuffle=True, num_workers=8)
+train_dataset = PACSImageAudioDataset(args.data_dir, "train_data", img_transform=train_img_transform, q_transform=train_q_transform, second_transform=train_second_transform, audio_transform=train_audio_transform, extra_imgs=True)
+train_dataloader = torch.utils.data.DataLoader(train_dataset, batch_size=args.batch_size, shuffle=True, num_workers=8)
 
 val_img_transform = transforms.Compose([
         transforms.Resize(224, interpolation=Image.BICUBIC),
@@ -151,8 +168,8 @@ val_audio_transform = transforms.Compose([
         ])
 
 val_q_transform = None
-val_dataset = PACSImageAudioDataset(DATA_DIR, "val_data", img_transform=val_img_transform, q_transform=val_q_transform, test_mode=True, audio_transform=val_audio_transform)
-val_dataloader = torch.utils.data.DataLoader(val_dataset, batch_size=BATCH_SIZE, shuffle=False, num_workers=8)
+val_dataset = PACSImageAudioDataset(args.data_dir, "val_data", img_transform=val_img_transform, q_transform=val_q_transform, test_mode=True, audio_transform=val_audio_transform)
+val_dataloader = torch.utils.data.DataLoader(val_dataset, batch_size=args.batch_size, shuffle=False, num_workers=8)
 
 train_losses = []
 train_accs = []
@@ -160,7 +177,7 @@ val_losses = []
 val_accs = []
 best_val_acc = 0
 
-for epoch in range(TOTAL_EPOCHS):
+for epoch in range(args.num_epochs):
     SAVE = False
     train_total = 0
     train_correct = 0
@@ -196,9 +213,9 @@ for epoch in range(TOTAL_EPOCHS):
         iter_loss += loss.item()
 
         if i % 40 == 39:
-            logger.info("Epoch {}: Iter {}: Train loss: {}, Train acc: {}".format(epoch, i, iter_loss/iter_total*BATCH_SIZE, iter_correct/iter_total))
+            logger.info("Epoch {}: Iter {}: Train loss: {}, Train acc: {}".format(epoch, i, iter_loss/iter_total*args.batch_size, iter_correct/iter_total))
             
-            writer.add_scalar("train/loss", iter_loss/iter_total*BATCH_SIZE, epoch*len(train_dataloader)+i)
+            writer.add_scalar("train/loss", iter_loss/iter_total*args.batch_size, epoch*len(train_dataloader)+i)
             writer.add_scalar("train/acc", iter_correct/iter_total, epoch*len(train_dataloader)+i)
 
             iter_loss = 0
@@ -248,5 +265,5 @@ for epoch in range(TOTAL_EPOCHS):
 
     # Save the model
     if SAVE:
-        torch.save(model.state_dict(), os.path.join(SAVE_PATH, f"model_audioclip_{num}_{epoch}.pt"))
+        torch.save(model.state_dict(), os.path.join(SAVE_PATH, f"model_audioclip_{args.run_num}_{epoch}.pt"))
         logger.info("Model saved to {}".format(SAVE_PATH))
