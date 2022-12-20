@@ -51,15 +51,13 @@ To run baseline models, visit the experiments folder. We have currently benchmar
 
 ## Citation
 
-If you used this repository, please consider citing us:
+If you used this repository or our dataset, please consider citing us:
 
 ```
-@misc{yu2022pacs,
-      title={PACS: A Dataset for Physical Audiovisual CommonSense Reasoning}, 
-      author={Samuel Yu and Peter Wu and Paul Pu Liang and Ruslan Salakhutdinov and Louis-Philippe Morency},
-      year={2022},
-      eprint={2203.11130},
-      archivePrefix={arXiv},
-      primaryClass={cs.LG}
+@inproceedings{yu2022pacs,
+  title={PACS: A Dataset for Physical Audiovisual CommonSense Reasoning},
+  author={Yu, Samuel and Wu, Peter and Liang, Paul Pu and Salakhutdinov, Ruslan and Morency, Louis-Philippe},
+  booktitle={European Conference on Computer Vision},
+  year={2022}
 }
 ```
